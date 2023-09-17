@@ -11,21 +11,21 @@ canvas.pack()
 #ulozenie slov z suborov do listov
 lahke, stredne, tazke, veducovske = [], [], [], []
 
-file_lahke = open("lahke.txt", "r", encoding="utf-8")
-for i in file_lahke:
-    lahke.append(i.strip().upper())
+with open("lahke.txt", "r", encoding="utf-8") as file_lahke:
+    for i in file_lahke:
+        lahke.append(i.strip().upper())
 
-file_stredne = open("stredne.txt", "r", encoding="utf-8")
-for i in file_stredne:
-    stredne.append(i.strip().upper())
+with open("stredne.txt", "r", encoding="utf-8") as file_stredne:
+    for i in file_stredne:
+        stredne.append(i.strip().upper())
 
-file_tazke = open("tazke.txt", "r", encoding="utf-8")
-for i in file_tazke:
-    tazke.append(i.strip().upper())
+with open("tazke.txt", "r", encoding="utf-8") as file_tazke:
+    for i in file_tazke:
+        tazke.append(i.strip().upper())
 
-file_veducovske = open("veducovske.txt", "r", encoding="utf-8")
-for i in file_veducovske:
-    veducovske.append(i.strip().upper())
+with open("veducovske.txt", "r", encoding="utf-8") as file_veducovske:
+    for i in file_veducovske:
+        veducovske.append(i.strip().upper())
 
 #obrazky
 img_rici = tkinter.PhotoImage(file='evolucia sarad_rici.gif')
